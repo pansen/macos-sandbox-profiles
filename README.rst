@@ -10,7 +10,9 @@ Problem
 -------
 
 To let any application run inside the sandbox, there has to 
+
 - exist a sandbox file, that grants enough permissions
+
 - be modified to original application package, to "bridge" the applications binary
   to a sandboxed version. 
 
