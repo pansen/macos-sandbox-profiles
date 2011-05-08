@@ -1,0 +1,102 @@
+(version 1)
+
+(deny default)
+
+(allow signal (target self))
+
+(allow file*
+       (literal "/dev/dtracehelper")
+       (literal "/dev/urandom")
+       (literal "/dev/null")
+       (regex #"^/Users/[a-zA-Z0-9_]+/Library/Application Support/Firefox")
+       (subpath "/tmp")
+       (subpath "/private/tmp")
+       )
+
+(allow file-read*
+       (literal "/Library/Application Support/Macromedia/FlashPlayerTrust")
+       (subpath "/usr")
+       (subpath "/System/Library/Frameworks")
+       (regex #"^/Users/[a-zA-Z0-9_]+")
+       (subpath "/Library/Preferences")
+       (subpath "/Applications/Firefox.app")
+       (subpath "/var")
+       (subpath "/private/var")
+       (subpath "/private/etc")
+       (subpath "/Library/Application Support/Mozilla")
+       (subpath "/Library/ColorSync/Profiles/Displays")
+       (subpath "/Library/PreferencePanes")
+       (subpath "/Applications/Preview.app")
+       (subpath "/Applications/MacVim.app")
+       (subpath "/Applications/Amazon MP3 Downloader.app")
+       )
+
+(allow file-read-data
+       (literal "/")
+       (literal "/Library")
+       (literal "/Library/Audio/Plug-Ins/HAL")
+       (literal "/Library/Application Support/Macromedia/FlashAuthor.cfg")
+       (literal "/dev/fd")
+       (literal "/Applications")
+       (literal "/Applications/Preview.app")
+       (literal "/Applications/Preview.app/Contents/MacOS/Preview/..namedfork/rsrc")
+       (subpath "/System/Library/CoreServices")
+       (subpath "/System/Library")
+       (subpath "/Library/Fonts")
+       (subpath "/Library/Internet Plug-Ins")
+       (subpath "/Library/InputManagers")
+       (subpath "/Library/Audio/Plug-Ins/HAL/iSightAudio.plugin")
+       (subpath "/Applications/Safari.app")
+       (subpath "/Library/Application Support/Macromedia/FlashPlayerTrust")
+       (subpath "/Library/QuickTime/EyeTV MPEG Support.component")
+       )
+
+(allow file-read-metadata
+       (literal "/")
+       (subpath "/etc")
+       (subpath "/Applications")
+       (subpath "/System")
+       (subpath "/Library")
+       (subpath "/Users")
+       )
+
+(allow process-fork)
+(allow ipc-posix-sem)
+(allow ipc-sysv-shm)
+(allow ipc-posix-shm)
+(allow mach-lookup)
+(allow network-outbound)
+(allow network-inbound (local ip))
+(allow sysctl-read)
+(allow system-socket)
+(allow process-exec
+       (literal "/Applications/Firefox.app/Contents/MacOS/firefox-bin.real")
+       (literal "/Applications/Firefox.app/Contents/MacOS/plugin-container.app/Contents/MacOS/plugin-container")
+       )
+
+(allow file-write*                                  
+       (literal "/Applications/Firefox.app/Contents/MacOS/update.test")
+       (subpath "/Library/Caches")
+       (subpath "/private/var/folders")
+       (regex #"^/Users/[a-zA-Z0-9_]+/Library/Caches/Firefox")
+       (regex #"^/Users/[a-zA-Z0-9_]+/Library/Preferences")
+       (regex #"^/Users/[a-zA-Z0-9_]+/Library/Caches/TemporaryItems")
+       (regex #"^/Users/[a-zA-Z0-9_]+/Downloads")
+       )
+
+(allow job-creation                                  
+       (literal "/Applications/Firefox.app/Contents/MacOS/firefox-bin.real")
+       (subpath "/Applications/Preview.app")
+       (subpath "/Applications/MacVim.app")
+       (subpath "/Applications/Amazon MP3 Downloader.app")
+       )
+
+(allow file-write-data
+       (subpath "/var/log")
+       (subpath "/private/var/folders")
+       )
+
+; all|deny
+(debug all)
+
+
