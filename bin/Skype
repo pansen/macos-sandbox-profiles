@@ -1,5 +1,5 @@
 #!/bin/sh
 
 /usr/bin/sandbox-exec \
-    -n /Users/Shared/macos-sandbox-profiles/skype.sb \
+    -f /Users/Shared/macos-sandbox-profiles/skype.sb \
     /Applications/Skype.app/Contents/MacOS/Skype.real

@@ -40,6 +40,7 @@
        (literal "/Applications")
        (literal "/Applications/Preview.app")
        (literal "/Applications/Preview.app/Contents/MacOS/Preview/..namedfork/rsrc")
+       (literal "/dev/random")
        (subpath "/System/Library/CoreServices")
        (subpath "/System/Library")
        (subpath "/Library/Fonts")
@@ -49,6 +50,7 @@
        (subpath "/Applications/Safari.app")
        (subpath "/Library/Application Support/Macromedia/FlashPlayerTrust")
        (subpath "/Library/QuickTime/EyeTV MPEG Support.component")
+       (subpath "/Library/Dictionaries")
        )
 
 (allow file-read-metadata
@@ -68,6 +70,7 @@
 (allow network-outbound)
 (allow network-inbound (local ip))
 (allow sysctl-read)
+(allow sysctl-write)
 (allow system-socket)
 (allow process-exec
        (literal "/Applications/Firefox.app/Contents/MacOS/firefox-bin.real")

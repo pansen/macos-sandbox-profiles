@@ -1,5 +1,5 @@
 #!/bin/sh
 
 /usr/bin/sandbox-exec \
-    -n /Users/Shared/macos-sandbox-profiles/firefox.sb \
+    -f /Users/Shared/macos-sandbox-profiles/firefox.sb \
     /Applications/Firefox.app/Contents/MacOS/firefox-bin.real

@@ -90,6 +90,7 @@
 
 (allow job-creation                                  
        (literal "/Applications/Skype.app/Contents/MacOS/Skype.real")
+       (subpath "/System/Library/CoreServices/Software Update.app")
        (subpath "/Applications/Preview.app")
        (subpath "/Applications/MacVim.app")
        )
