@@ -20,6 +20,11 @@ The first point is pretty easy to build, the second point is a bit insecure as a
 application could overwrite our "bridged starter" via update. If there is a good 
 idea in someones' mind, let me know. 
 
+Links
+-----
+
+- http://apple.stackexchange.com/questions/124799/how-to-sandbox-individual-applications-on-os-x-mavericks
+
 Howto Do
 --------
 
